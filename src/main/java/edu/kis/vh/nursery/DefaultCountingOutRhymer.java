@@ -1,16 +1,14 @@
 package edu.kis.vh.nursery;
 
-import com.sun.org.apache.bcel.internal.generic.RET;
-
 public class DefaultCountingOutRhymer {
 
     public static final int MAX_SIZE = 12;
-    public static final int Empty = -1;
-    public static final int Full = 11;
+    public static final int EMPTY = -1;
+    public static final int FULL = 11;
     public static final int RETURN_VALUE = -1;
     private final int[] numbers = new int[MAX_SIZE];
 
-    private int total = Empty;
+    private int total = EMPTY;
 
     public void countIn(int in) {
         if (!isFull())
@@ -18,11 +16,11 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == Empty;
+        return total == EMPTY;
     }
 
     public boolean isFull() {
-        return total == Full;
+        return total == FULL;
     }
 
     protected int peekaboo() {
